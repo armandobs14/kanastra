@@ -1,0 +1,68 @@
+services:
+  mysql:
+    image: debezium/example-mysql
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    env_file:
+      - .env
+  zookeeper:
+    image: docker.io/bitnami/zookeeper:3.8
+    ports:
+      - "2181:2181"
+    env_file:
+      - .env
+  kafka:
+    image: docker.io/bitnami/kafka:3.4
+    ports:
+      - "9092:9092"
+    volumes:
+      - .storage/kafka/data:/bitnami
+    env_file:
+      - .env
+    depends_on:
+      - zookeeper
+
+  kafka_connect:
+    image: debezium/connect
+    container_name: connect
+    ports:
+      - "8083:8083"
+    env_file:
+      - .env
+    depends_on:
+      - zookeeper
+      - kafka
+      - mysql
+  redpanda_cli:
+    image: docker.redpanda.com/redpandadata/console:latest
+    environment:
+      - KAFKA_BROKERS=kafka:9092
+    ports:
+      - "8080:8080"
+    depends_on:
+      - kafka
+  jupyterlab:
+    image: jupyter/pyspark-notebook:spark-3.5.0
+    container_name: jupyterlab
+    command: [ "jupyter-lab", "--allow-root", "--NotebookApp.token=''", "--LabApp.token=''" ]
+    user: root
+    env_file:
+      - .env
+    environment:
+      PYSPARK_SUBMIT_ARGS: "--master local[*] pyspark-shell --conf spark.ui.port: 4040"
+      GRANT_SUDO: "yes"
+    ports:
+      - "8888:8888/tcp"
+      - "4040:4040/tcp"
+    restart: on-failure
+    volumes:
+      - .storage/jupyter:/home/jovyan/work
+    depends_on:
+      - kafka
+
+volumes:
+  zookeeper_data:
+    driver: local
+  kafka_data:
+    driver: local
