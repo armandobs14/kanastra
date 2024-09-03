@@ -20,7 +20,7 @@ Com o objetivo de indetificar qualquer alteração nos dados, utilizou-se o debe
 O Kafka possui diversos recursos para que reforçam a garantia de entrega e retenção das mensagens, dessa forma nenhum dado será perdido.
 
 ### 5 - Sync
-O processo de sync dos dados pode variar dependendo do foco. Nessa arquitetura em questão, temo-se como objeto do sync trazer os dados que estão nos tópicos do kafka para a camada raw do data-lake sem que nenhuma alteração seja realizada nesse processo.
+O processo de sync dos dados pode variar dependendo do foco. Nessa arquitetura em questão, tem-se como objeto do sync trazer os dados que estão nos tópicos do kafka para a camada raw do data-lake sem que nenhuma alteração seja realizada nesse processo.
 
 ### 6 - [Minio](https://min.io)
 O minio implenta a API do S3, entregando assim uma forma fácil para abstrair a implementação do data-lake. Além disso, o mesmo tem a capacidade de utilizar outros object storares abstraindo assim a complexidade de lhe dar com multicloud quando necessário.
