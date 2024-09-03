@@ -42,4 +42,4 @@ A sua natureza distruibidada de processamento bem como a curva de aprendizado re
 Desenvolvida com o objetivo de facilitar o desenvolvimento de pipelines complexas de dados. O Apache airflow conta com diversos operadores que permitem coordenar execuções simples e complexas de forma transparente, permotindo a extração do melhor de cada abordagem. 
 
 ### 12 - [Trino](https://trino.io/)
-O trino (antigo prestoSQL) permite que realizemos consultas diretamente nas bases de dados do data-lake reduzindo a necessidade d subir clusteres ou notebooks para exploração dos arquivos.
+O trino (antigo prestoSQL) permite que realizemos consultas diretamente nas bases de dados do data-lake reduzindo a necessidade de subir clusteres ou notebooks para exploração dos arquivos.
