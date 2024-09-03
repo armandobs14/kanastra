@@ -1,4 +1,4 @@
-# Teste técnino Kanastra
+# Teste técnico Kanastra
 
 [Descrição do desafio](Desafio.md)
 
