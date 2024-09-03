@@ -1,5 +1,5 @@
 # 1 -  Análises com SQL
-### Diagrame ER
+### Diagrama ER
 ![alt text](itunes.png "Entity Relation Diagram")
 
 
