@@ -1,7 +1,7 @@
 # 2 - ETL em PySpark
 Esse projeto foi desenvolvido utilizando linux, dessa forma é recomendável utilizar alguma distribuição da sua escolha para a realização dos testes.
 
-Todos os scripts principais, bem como funções auxiliares pode mser encontradas na pasta [scripts](scripts/)
+Todos os scripts principais, bem como funções auxiliares podem ser encontradas na pasta [scripts](scripts/)
 
 ## Requisitos
   - [make](https://pt.linux-console.net/?p=14595): Para a execução do makefile
@@ -11,7 +11,7 @@ Todos os scripts principais, bem como funções auxiliares pode mser encontradas
 ## Processo de execução
 
 ### 1. baixar dados
-Salve p arquivo `kanastra-data-eng-test-datasets.zip` na sua pasta de Downloads `/home/{usuario}/Downlods`.
+Salve o arquivo `kanastra-data-eng-test-datasets.zip` na sua pasta de Downloads `/home/{usuario}/Downlods`.
 
 ### 2. Configurar minio
 Para trazer o conteúdo do zip para dentro do data-lake rode o comando
