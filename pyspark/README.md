@@ -54,7 +54,7 @@ Nessa etapa o script de [pipeline](scripts/pipeline.py) executa três ETLs:
 
 
 ### 4. Conteúdo final
-Ao termino da execução p teudo do [CSV](arquivo.csv) será o como o abaixo:
+Ao termino da execução o conteúdo do [CSV](arquivo.csv) será o como o abaixo:
 | year | year_week | name                              | trips |
 |------|-----------|-----------------------------------|-------|
 | 2012 | 4         | Creative Mobile Technologies, LLC | 11400 |
